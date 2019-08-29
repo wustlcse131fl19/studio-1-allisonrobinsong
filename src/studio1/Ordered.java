@@ -1,5 +1,6 @@
 package studio1;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import support.cse131.ArgsProcessor;
 
 public class Ordered {
@@ -13,6 +14,10 @@ public class Ordered {
 		int y = ap.nextInt("Value for y?");
 		int z = ap.nextInt("Value for z?");
 
+		boolean isOrdered = true;
+		isOrdered = ((x < y && y < z) || (x > y) && (y > z));
+
+		System.out.println(isOrdered);
 	}
 
 }
